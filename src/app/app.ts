@@ -1,11 +1,11 @@
-import { Component, signal } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { Auth } from './auth/auth';
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Auth],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss']
 })
 export class App {
-  protected readonly title = signal('my-app');
+  title = 'default'
 }
