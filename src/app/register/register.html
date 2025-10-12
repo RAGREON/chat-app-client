@@ -1,0 +1,9 @@
+<section id="register-section">
+  <form (ngSubmit)="onRegister()" #myForm="ngForm">
+    <input [(ngModel)]="registerFormData.email" name="email" type="email" placeholder="enter email">
+    <input [(ngModel)]="registerFormData.username" name="username" type="text" placeholder="enter username">
+    <input [(ngModel)]="registerFormData.password" name="password" type="password" placeholder="enter password">
+
+    <button type="submit">Register</button>
+  </form>
+</section>

@@ -1,0 +1,13 @@
+<div class="message-card">
+  <div class="top">
+    <!-- <div class="profile-photo-wrapper"></div> -->
+    <span class="username" *ngIf="username"> {{ username }} </span>
+
+    <span class="date" *ngIf="date"> {{ date }} </span>
+  </div>
+
+  <div class="content-wrapper">
+    <span class="content" *ngIf="content"> {{ content }} </span>
+    <span *ngIf="time"> {{ time }} </span>
+  </div>
+</div>

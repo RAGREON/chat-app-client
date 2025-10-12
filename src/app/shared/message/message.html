@@ -1,0 +1,12 @@
+<div class="message-card">
+  <div class="top">
+    <span *ngIf="username"> {{ username }} </span>
+    <span *ngIf="timestamp"> {{ timestamp }} </span>
+  </div>
+
+  <div class="content-wrapper">
+    <p *ngIf="content">
+      {{ content }}
+    </p>
+  </div>
+</div>

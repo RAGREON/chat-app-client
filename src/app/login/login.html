@@ -1,0 +1,23 @@
+<section class="login-section">
+  <form (ngSubmit)="onLogin()" #myForm="ngForm">
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="formData.email"
+      placeholder="enter username"
+      required
+    />
+    <input
+      type="password"
+      name="password"
+      [(ngModel)]="formData.password"
+      palceholder="enter password"
+      required
+    />
+
+    <button type="submit">Login</button>
+  </form>
+
+  <span>Token:</span>
+  <p>{{ token }}</p>
+</section>
