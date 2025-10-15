@@ -1,0 +1,11 @@
+.message-section {
+  height: 100vh; 
+  min-height: 100vh;
+  background-color: rgb(193, 133, 20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.625rem;
+  box-sizing: border-box;
+  width: 450px;
+}

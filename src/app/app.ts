@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Login } from './login/login';
-import { Register } from './register/register';
-import { MessageCard } from './shared/message-card/message-card';
 import { MessageData, MessageService } from './services/message';
 import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ChatService, ReceivedMessage } from './chat-service';
+import { Navbar } from './ui/navbar/navbar';
+import { MessageSection } from './message-section/message-section';
+import { ChatSection } from "./ui/chat-section/chat-section";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-root',
-  imports: [Login, Register, MessageCard, NgFor, FormsModule],
+  standalone: true,
+  imports: [FormsModule, Navbar, MessageSection, ChatSection],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })

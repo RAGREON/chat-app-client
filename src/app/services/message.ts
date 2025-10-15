@@ -24,7 +24,6 @@ export class MessageService {
 
   constructor(private http: HttpClient, private chatService: ChatService) {}
 
-
   sendMessage(request: SendMessageRequest): Observable<MessageData> {
     return this.http.post<MessageData>(`${this.baseUrl}/send`, {
       request,

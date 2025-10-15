@@ -1,54 +1,5 @@
 <main>
-  <header>Chat-App</header>
-
-  <section class="app-auth">
-    <app-login></app-login>
-  </section>
-
-  <app-register></app-register>
-
-  <button (click)="loadMessages()">load messages</button>
-
-  <section class="message-section">
-    <app-message-card
-      *ngFor="let msg of messages"
-      username="ok"
-      [content]="msg.messageContent"
-      date="-"
-      time="-"
-    ></app-message-card>
-  </section>
-
-  <input type="text" name="userId" [(ngModel)]="userId" placeholder="user id" />
-  <!-- <input type="text" name="message" [(ngModel)]="message" placeholder="user id" /> -->
-
-  <button (click)="getConnectedUsers()">Get Connected Users</button>
-
-  <section>
-    <span>Connected Users:</span>
-    <br />
-
-    <div *ngFor="let user of connectedUsers">
-      <span>User Id: {{ user }} </span>
-      <br />
-      <button (click)="sendMessage(user)">Send Message</button>
-
-      <input
-        type="text"
-        placeholder="send message"
-        name="message"
-        [(ngModel)]="draftMessages[user]"
-      />
-    </div>
-  </section>
-
-  <section>
-    <span>Received Messages:</span>
-    <br />
-
-    <div *ngFor="let message of receivedMessages">
-      <span>User ID: {{ message.userId }} :</span>
-      <span> {{ message.message }} </span>
-    </div>
-  </section>
+  <app-navbar></app-navbar>
+  <app-message-section></app-message-section>
+  <app-chat-section></app-chat-section>
 </main>

@@ -1,0 +1,11 @@
+main {
+  display: flex;
+  justify-content: start;
+  width: 100vw;
+  height: 100vh;
+  background-color: yellow;
+
+  app-chat-section {
+    flex: 1;
+  }
+}

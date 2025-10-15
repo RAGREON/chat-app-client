@@ -1,0 +1,45 @@
+<section class="chat-section">
+  <div class="profile-buttons">
+    <div class="friend-photo-wrapper">
+      <img src="assets/images/pfp.png" alt="" />
+    </div>
+  </div>
+
+  <div class="chat-messages" #chatMessages>
+    <div style="margin-top: auto;"></div>
+
+
+    <app-chat-message messageContent="Hello" timeStamp="18:00"></app-chat-message>
+
+    <app-chat-message
+      messageContent="I am doing great, and I hope you have been doing great too."
+      timeStamp="18:02"
+      align="right"
+    ></app-chat-message>
+
+    <app-chat-message
+      *ngFor="let message of messages"  
+      [messageContent]="message.content"
+      [timeStamp]="message.timeStamp"
+      [align]="message.align"
+    ></app-chat-message>
+
+    <div app-chat-message></div>
+  </div>
+
+  <div class="chat-input">
+    <div class="attachment">
+      <fa-icon [icon]="paperClipIcon"></fa-icon>
+    </div>
+    <input
+      [(ngModel)]="newMessage"
+      name="newMessage"
+      type="text"
+      placeholder="Enter Message"
+      (keyup.enter)="sendMessage()"
+      autocomplete="off"
+    />
+    >
+    <button></button>
+  </div>
+</section>
